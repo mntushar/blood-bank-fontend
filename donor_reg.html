@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-3.3.1.slim.min.js"></script>
+  <script src="js/popper-1.14.7.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <link rel="shortcut icon" type="image/x-icon" href="imge/logo/blogo.jpg">
+
+  <title>BAUET Blood Bank Management System</title>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <!-- head title -->
+    <header>
+      <h5 class="head text-white text-center p-3">BAUET Bood Bank Management System</h5>
+    </header>
+  </div>
+
+  <div class="container-fluid">
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-sm">
+
+      <!-- logo -->
+      <a class="navbar-brand ml-5" href="#">
+        <img src="imge/logo/blogo.jpg" alt="logo" style="width:60px;">
+      </a>
+
+      <!-- navbar item -->
+      <div class="col">
+        <ul class="navbar-nav flex-row-reverse">
+          <li class="nav-item text-dark">
+            <a class="nav-link font-weight-bolder" href="about_us.html">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link font-weight-bolder" href="contact_us.html">Contact Us</a>
+          </li>
+          <!-- Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link font-weight-bolder" href="#" data-toggle="dropdown">
+              Log In
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item font-weight-bolder" href="#">Admin</a>
+              <a class="dropdown-item font-weight-bolder" href="donor_log.html">Donor</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link font-weight-bolder" href="donor_reg.html">Donor Registration</a>
+          </li>
+          <li class="nav-item font-weight-bolder">
+            <a class="nav-link" href="search.html">Search</a>
+          </li>
+          <li class="nav-item font-weight-bolder">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+  <!-- from -->
+  <div class="container-fluid">
+    <h2 class="text-center font-">Blood Donor Registration Form</h2>
+    <!-- for username -->
+    <div class="form_body">
+      <form action="">
+        <!-- first name -->
+        <label for="uname">User name:</label>
+        <div class="input-group mb-3">
+          <input type="text" class="form-control mr-3" id="uname" placeholder="Enter  first name" name="uname" required>
+          <!-- last name -->
+          <input type="text" class="form-control" id="uname" placeholder="Enter last name" name="uname" required>
+        </div>
+
+
+        <!--Date of Birth and blood group-->
+        <!-- date of birth title -->
+        <label for="text">Date of Birth:</label>
+        <!-- blood group title -->
+        <label for="text" class="blood_group">Select blood group:</label>
+        <div class="input-group mb-3">
+          <!-- date of birth -->
+          <input type="date" class="form-control mr-3" id="date"  name="date" required>
+
+          <!-- for bood group -->
+          <label for="text"></label>
+          <select class="form-control" id="blood_group" name="bd_g">
+            <option>-</option>
+            <option>A+</option>
+            <option>A-</option>
+            <option>B+</option>
+            <option>B-</option>
+            <option>O-</option>
+            <option>O-</option>
+            <option>AB+</option>
+            <option>AB-</option>
+          </select>
+        </div>
+
+        <!-- phone number and email -->
+        <label for="phone">Phone Number:</label>
+        <label for="email" class="email_group">Email:</label>
+        <div class="input-group mb-3">
+          <input type="text" class="form-control mr-3" id="phone" placeholder="Enter phone number" name="phone" required>
+
+          <!-- Email -->
+          <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" required>
+        </div>
+
+        <!-- occupation -->
+        <div class="form-group">
+          <label for="occu">Occupation:</label>
+          <input type="text" class="form-control" id="occu" placeholder="Enter your Occupation" name="occu" required>
+        </div>
+
+        <!-- home address -->
+        <div class="form-group">
+          <label for="hadd">Home Address:</label>
+          <textarea class="form-control" rows="4" id="hadd" name="text"></textarea>
+        </div>
+
+        <!-- Did you ever donate blood before? -->
+        <div class="donate">
+          <p>Did you ever donate blood before?</p>
+          <div class="form-check">
+            <label class="form-check-label" for="radio1">
+              <input type="radio" class="form-check-input" id="radio1" name="donate_c" value="option1">Yes
+          </div>
+          <div class="form-check">
+            <label class="form-check-label" for="radio2">
+              <input type="radio" class="form-check-input" id="radio2" name="donate_c" value="option2">No
+            </label>
+          </div>
+        </div>
+
+        <!-- Health Security Check -->
+        <div class="health mt-4 mb-2">
+          <h5>Health Security Check</h5>
+
+          <!-- Do you suffer of any diseases? -->
+          <div class="health_chech mt-4">
+            <p>Do you suffer of any diseases?</p>
+            <div class="form-check">
+              <label class="form-check-label" for="radio3">
+                <input type="radio" class="form-check-input" id="radio3" name="health_c" value="option3">Yes
+            </div>
+            <div class="form-check">
+              <label class="form-check-label" for="radio4">
+                <input type="radio" class="form-check-input" id="radio4" name="health_c" value="option4">No
+              </label>
+            </div>
+          </div>
+
+          <!-- Do you have allergies? -->
+          <div class="allergies_chech mt-4">
+            <p>Do you have allergies?</p>
+            <div class="form-check">
+              <label class="form-check-label" for="radio5">
+                <input type="radio" class="form-check-input" id="radio5" name="allergies_c" value="option3">Yes
+            </div>
+            <div class="form-check">
+              <label class="form-check-label" for="radio6">
+                <input type="radio" class="form-check-input" id="radio6" name="allergies_c" value="option4">No
+              </label>
+            </div>
+          </div>
+
+          <!-- Have you ever had positive Blood test for HbsAg, Hcv, HIV? -->
+          <div class="hbs_chech mt-4">
+            <p>Have you ever had positive Blood test for HbsAg, Hcv, HIV?</p>
+            <div class="form-check">
+              <label class="form-check-label" for="radio7">
+                <input type="radio" class="form-check-input" id="radio7" name="hbs_c" value="option3">Yes
+            </div>
+            <div class="form-check">
+              <label class="form-check-label" for="radio8">
+                <input type="radio" class="form-check-input" id="radio8" name="hbs_c" value="option4">No
+              </label>
+            </div>
+          </div>
+
+          <!-- Do you have any cardiac problems? -->
+          <div class="cardiac_chech mt-4">
+            <p>Do you have any cardiac problems?</p>
+            <div class="form-check">
+              <label class="form-check-label" for="radio9">
+                <input type="radio" class="form-check-input" id="radio9" name="cardiac_c" value="option3">Yes
+            </div>
+            <div class="form-check">
+              <label class="form-check-label" for="radio10">
+                <input type="radio" class="form-check-input" id="radio10" name="cardiac_c" value="option4">No
+              </label>
+            </div>
+          </div>
+
+          <!-- Do you suffer any bleeding disorders? -->
+          <div class="bleeding_chech mt-4">
+            <p>Do you suffer any bleeding disorders?</p>
+            <div class="form-check">
+              <label class="form-check-label" for="radio11">
+                <input type="radio" class="form-check-input" id="radio11" name="bleeding_c" value="option3">Yes
+            </div>
+            <div class="form-check">
+              <label class="form-check-label" for="radio12">
+                <input type="radio" class="form-check-input" id="radio12" name="bleeding_c" value="option4">No
+              </label>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- password -->
+        <div class="form-group">
+          <label for="pwd">Password:</label>
+          <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd" required>
+
+          <!-- repert password -->
+          <label for="pwd">Repeat password:</label>
+          <input type="password" class="form-control" id="rpwd" placeholder="Enter password again" name="rpwd" required>
+        </div>
+
+        <!-- check box -->
+        <div class="form-group form-check">
+          <label class="form-check-label">
+            <input class="form-check-input" type="checkbox" name="remember" required> I agree on condition.
+          </label>
+        </div>
+        <button type="submit" class="btn reg_btn">Submit</button>
+    </div>
+    </form>
+  </div>
+
+  <!-- footer -->
+  <footer class="container-fluid">
+    <div class="footer clearfix">
+      <p class="text-center text-white p-2">
+        Bangladesh Army University of Engineering & Technology<br>
+        Qadirabad Cantonment, Natore<br>
+        Phone: +880 1708503510, 01708503504, 01708503514<br>
+        Email: info@bauet.ac.bd, registrar@bauet.ac.bd<br>
+
+      </p>
+
+    </div>
+  </footer>
+
+
+
+
+
+</body>
+
+</html>
